@@ -1,0 +1,6 @@
+en:
+  GridFieldRelationHandler:
+    COLUMNTITLE: 'Relation Status'
+    CHANGE_RELATION_STATUS: 'Change relation status'
+    SAVE_RELATION_CHANGES: 'Save changes'
+    CANCEL_RELATION_CHANGES: 'Cancel changes'

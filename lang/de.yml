@@ -1,0 +1,6 @@
+de:
+  GridFieldRelationHandler:
+    COLUMNTITLE: 'Zuordnung'
+    CHANGE_RELATION_STATUS: 'Zuordnungen bearbeiten'
+    SAVE_RELATION_CHANGES: 'Änderungen speichern'
+    CANCEL_RELATION_CHANGES: 'Änderungen verwerfen'

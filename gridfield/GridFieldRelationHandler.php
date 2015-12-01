@@ -4,16 +4,17 @@ abstract class GridFieldRelationHandler implements GridField_ColumnProvider, Gri
 	protected $targetFragment;
 	protected $useToggle;
 
-	protected $columnTitle = 'Relation Status';
-	protected $buttonTitles = array(
-		'SAVE_RELATION' => 'Save changes',
-		'CANCELSAVE_RELATION' => 'Cancel changes',
-		'TOGGLE_RELATION' => 'Change relation status',
-	);
+    protected $columnTitle;
+    protected $buttonTitles = array();
 
 	public function __construct($useToggle = true, $targetFragment = 'before') {
 		$this->targetFragment = $targetFragment;
 		$this->useToggle = $useToggle;
+
+        $this->columnTitle = _t('GridFieldRelationHandler.COLUMNTITLE', 'Relation Status');
+        $this->buttonTitles['TOGGLE_RELATION'] = _t('GridFieldRelationHandler.CHANGE_RELATION_STATUS', 'Change relation status');
+        $this->buttonTitles['SAVE_RELATION'] = _t('GridFieldRelationHandler.SAVE_RELATION_CHANGES', 'Save changes');
+        $this->buttonTitles['CANCELSAVE_RELATION'] = _t('GridFieldRelationHandler.CANCEL_RELATION_CHANGES', 'Cancel changes');
 	}
 
 	public function setUseToggle($useToggle) {

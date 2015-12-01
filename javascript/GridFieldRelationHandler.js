@@ -1,5 +1,11 @@
+console.log('Loading GridFieldRelationHandler');
+
 jQuery(function($) {
+    console.log('Loading GridFieldRelationHandler - jQuery');
+
 	$.entwine('ss', function($) {
+        console.log('Loading GridFieldRelationHandler - entwine');
+
 		$('.ss-gridfield .ss-gridfield-item .col-noedit').entwine({
 			onclick: function(e) {
 				e.stopPropagation();
@@ -16,9 +22,18 @@ jQuery(function($) {
 			onchange: function(e) {
 				var state = this.getState();
 				var input = $(e.target).closest('input');
+
+                console.log(state);
+                console.log(input);
+
 				if(input.hasClass('radio')) {
+                    console.log('radio');
+
 					state.RelationVal = input.val();
 				} else if(input.hasClass('checkbox')) {
+                    console.log('checkbox');
+                    console.log(state.RelationVal.indexOf);
+
 					if(state.RelationVal.indexOf) {
 						if(input.is(':checked')) {
 							state.RelationVal.push(input.val());
@@ -36,6 +51,10 @@ jQuery(function($) {
 						state.RelationVal = [];
 					}
 				}
+
+                console.log(state);
+                console.log(state.RelationVal);
+
 				this.setState(state);
 			}
 		});
